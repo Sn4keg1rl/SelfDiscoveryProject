@@ -151,8 +151,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b26b8fcd3883d419bf3486fd8b4651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -0.015
-  speed: 15
+  gravity: -0.05
+  speed: 7
+  nextJumpDelay: 0.5
+  jumpHeight: 300
+  feetPosition: {fileID: 465951506}
+  checkRadius: 0.1
+  groundType:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &31081904
 Transform:
   m_ObjectHideFlags: 0
@@ -161,10 +168,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31081902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.543, y: 1.269, z: 0}
+  m_LocalPosition: {x: 11.1, y: 1.269, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1308380912}
+  - {fileID: 465951506}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -503,7 +511,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-8566
+  m_Name: pb_Mesh14102
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -971,6 +979,36 @@ Transform:
   m_Father: {fileID: 1582854670}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &465951505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465951506}
+  m_Layer: 0
+  m_Name: Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465951506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465951505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 31081904}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &622686939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1268,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14072
+  m_Name: pb_Mesh14088
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
